@@ -1,0 +1,270 @@
+:root {
+  --orange: #ffb224;
+  --pink: #ff19e9;
+  --green: #297a00;
+  --white: #ffffff;
+  --light-grey: #b1b1b1;
+  --dark-grey: #404040;
+  --black: #000000;
+}
+
+.app {
+  border: 10px solid #ffb224;
+  background-image: linear-gradient(244deg, #297a00, #e29c1b, #ff19e9);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "rig-regular", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #fff;
+}
+
+button, .btn {
+  color: #fff;
+  background-color: #ffb224;
+  border-color: #ffb224;
+  outline: 0;
+  border: 0;
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 1em 2em;
+  text-decoration: none;
+  font-white: bold;
+  cursor: pointer;
+  font-family: 'rig-regular';
+}
+
+img {
+  max-width: 100%;
+}
+
+nav {
+  background: var(--dark-grey);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem; 
+}
+
+nav ol {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-left: auto;
+  flex: 1;
+  justify-content: center;
+}
+
+nav .link a {
+  color: #e3e3e3;
+  font-family: 'rig-regular';
+}
+
+nav .logo {
+  max-width: 146px;
+}
+
+.section {
+  padding: 100px;
+  text-align: center;
+}
+
+.section.faq {
+  background-color: var(--light-grey)
+}
+
+.section.faq h2 {
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.section.hero {
+  padding: 50px 100px 20px;
+  text-align: center;
+}
+
+.section.hero img {
+  max-width: 750px;
+  margin: auto;
+}
+
+.section {
+  padding: 100px;
+}
+
+.section.mint {
+  text-align: center;
+  padding-top: 0;
+  /* background-image: linear-gradient(45deg, #ff19e9, #ffb224, #ff19e9, #ffb224); */
+}
+
+.section.mint h2 {
+  margin-bottom: 1rem;
+  font-size: 40px;
+}
+
+.section.mint h4 {
+  margin-bottom: 2rem;
+}
+
+.section.mint .grid {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.mint-card {
+  overflow: hidden;
+  background-image: linear-gradient(45deg, #ffb224, transparent);
+  padding: 1.5rem;
+  border-radius: 4px;
+  color: #fff;
+  border: 1px solid rgb(255 255 255 / 51%);
+}
+
+.mint-card h3 {
+  margin-bottom: 1rem;
+}
+
+.mint-card img {
+  border: 5px solid;
+  border-radius: 4px;
+}
+
+.mint-card button {
+  border: 1px solid rgb(255 255 255 / 51%);
+  font-size: 17px;
+}
+
+.mint-card .max-mint {
+  margin-bottom: 0 !important;
+}
+
+.mint-selector {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.mint-selector button:hover {
+  filter: brightness(105%);
+}
+
+.mint-selector span .mint-amount-btn {
+  cursor: pointer;
+  font-size: 32px;
+  margin: 0;
+  color: #eee;
+}
+
+.mint-selector span .mint-amount-btn:hover {
+  color: #fff;
+}
+
+.mint-selector .mint-amount {
+  font-size: 18px;
+}
+
+.feedback {
+  padding: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 24px;
+  margin-bottom: 0 !important;
+}
+
+.section.connect {
+  min-height: 100%;
+  text-align: center;
+}
+
+.section.connect img {
+  max-width: 750px;
+  display: block;
+  margin: auto;
+}
+
+.section.connect button {
+  font-size: 20px;
+}
+
+footer {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+footer h4 {
+  color: var(--dark-grey)
+}
+
+footer img {
+  max-width: 95px;
+}
+
+/* Accordion */
+.wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.accordion-wrapper + * {
+  margin-top: 1rem;
+}
+
+.accordion-item {
+  overflow: hidden;
+  height: auto;
+  max-height: 9999px;
+}
+
+.accordion-item.collapsed {
+  max-height: 0;
+}
+
+.accordion-title {
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.75em 1em;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.accordion-title::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid currentColor;
+  transform: rotate(270deg);
+}
+
+.accordion-title:hover,
+.accordion-title.open {
+  color: black;
+}
+
+.accordion-title.open::after {
+  content: "";
+  border-top: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid currentColor;
+  transform: rotate(0deg);
+}
+
+.accordion-content {
+  padding: 0.75em 1em;
+  text-align: left;
+  line-height: 1.5em;
+}
