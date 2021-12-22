@@ -39,6 +39,11 @@ img {
   max-width: 100%;
 }
 
+button:disabled {
+  opacity: 0.75;
+  cursor: no-drop;
+}
+
 nav {
   background: var(--dark-grey);
   font-size: 20px;
@@ -188,6 +193,7 @@ nav .logo {
 
 .section.connect button {
   font-size: 20px;
+  margin-bottom: 1rem;
 }
 
 footer {

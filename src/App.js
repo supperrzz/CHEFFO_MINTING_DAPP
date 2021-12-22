@@ -13,9 +13,9 @@ function App() {
   const [blockchain, setBlockchain] = useState({});
   const [userState, setUserState] = useState('NOT_CONNECTED');
   
-  // useEffect(() => {
-  //   connect();
-  // }, []);
+  useEffect(() => {
+    connect();
+  }, []);
 
   const connect = async () => {
     const { ethereum } = window;
@@ -36,7 +36,7 @@ function App() {
           network, 
           networkName 
         } = SmartContract
-        
+
         // If on the correct chain
         if (Number(networkId) === network) {
           setUserState('CONNECTED');
@@ -49,22 +49,27 @@ function App() {
                 account: accounts[0],
               })
               )
-            else
-              setUserState('DISCONNECTED')
+            else {
+              setUserState('NOT_CONNECTED')
+            }
           });
 
         } else {
           // On the wrong network
           setUserState('WRONG_NETWORK')
         };
-  
+
           // User changes Metamask chain
           ethereum.on("chainChanged", () => {
             window.location.reload();
           });
         } catch (err) {
-          console.log(err)
-          setUserState('SYSTEM_ERROR');
+          if (err.code === 4001) {
+            setUserState('NOT_CONNECTED');
+          } else {
+            console.log(err)
+            setUserState('SYSTEM_ERROR');
+          }
         }
     } else {
       setUserState('NOT_CONNECTED');
@@ -108,10 +113,10 @@ function App() {
             <img src="//images.squarespace-cdn.com/content/v1/617ce6e6e7be6e72e51086cc/eba1e465-5a01-4493-8116-a255d434b9fa/CHEFFO+LOGO.png?format=1500w" alt="CHEFFO" class="logo"/>
           </a>
           <ol>
-            <li class="link"><a href="#">COOKIE BOX</a></li>
-            <li class="link"><a href="#">V1</a></li>
-            <li class="link"><a href="#">RESTAURANT</a></li>
-            <li class="link"><a href="#">MAP</a></li>
+            <li class="link"><a href="/">COOKIE BOX</a></li>
+            <li class="link"><a href="https://www.cheffo.io/nft">V1</a></li>
+            <li class="link"><a href="https://www.cheffo.io/restaurant">RESTAURANT</a></li>
+            <li class="link"><a href="https://www.cheffo.io/cheffo-roadmap">MAP</a></li>
           </ol>
           <a href="#mint" class="link"><span class="btn" >V1 MINT</span></a>
         </nav>
