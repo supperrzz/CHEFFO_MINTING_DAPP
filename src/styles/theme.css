@@ -20,6 +20,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+.hidden {
+  display: none !important;
+}
+
 button, .btn {
   color: #fff;
   background-color: #ffb224;
@@ -125,6 +129,7 @@ nav .logo {
   border-radius: 4px;
   color: #fff;
   border: 1px solid rgb(255 255 255 / 51%);
+  position: relative;
 }
 
 .mint-card h3 {
@@ -139,6 +144,18 @@ nav .logo {
 .mint-card button {
   border: 1px solid rgb(255 255 255 / 51%);
   font-size: 17px;
+}
+
+.mint-card-loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(214 154 25 / 86%);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mint-card .max-mint {
@@ -273,4 +290,38 @@ footer img {
   padding: 0.75em 1em;
   text-align: left;
   line-height: 1.5em;
+}
+
+/* loader */
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
 }
