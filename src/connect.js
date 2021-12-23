@@ -1,4 +1,4 @@
-export const Connect = ({ userState, connect }) => {
+export const Connect = ({ userState, setUserState }) => {
 
   return (
     <div class="connect">
@@ -8,10 +8,10 @@ export const Connect = ({ userState, connect }) => {
           disabled={userState === "WRONG_NETWORK"}
           onClick={(e) => {
             e.preventDefault();
-            connect();
+            setUserState("ENTER");
           }}
         >
-          CONNECT YOUR WALLET
+          [ ENTER THE COOKIE BOX ]
         </button>
         {userState === "WRONG_NETWORK" && <h5>Please switch to the Polygon network</h5>}
       </div>

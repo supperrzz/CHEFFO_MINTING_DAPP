@@ -32,7 +32,7 @@ button, .btn {
   border: 0;
   font-size: 14px;
   border-radius: 4px;
-  padding: 1em 2em;
+  padding: 1em 1.2em;
   text-decoration: none;
   font-white: bold;
   cursor: pointer;
@@ -80,7 +80,8 @@ nav .logo {
 }
 
 .section.faq {
-  background-color: var(--light-grey)
+  background-color: var(--dark-grey);
+  color: #fff;
 }
 
 .section.faq h2 {
@@ -120,6 +121,7 @@ nav .logo {
 .section.mint .grid {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .mint-card {
@@ -143,7 +145,25 @@ nav .logo {
 
 .mint-card button {
   border: 1px solid rgb(255 255 255 / 51%);
-  font-size: 17px;
+  font-size: 14px;
+  padding: 1em 2em;
+}
+
+.mint-button {
+  margin-top: 1rem;
+}
+
+.mint-card label h5 {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.mint-card .mint-amount {
+  margin-bottom: 0;
+}
+
+.loading {
+  margin-top: 1rem;
 }
 
 .mint-card-loader {
@@ -272,11 +292,6 @@ footer img {
   transform: rotate(270deg);
 }
 
-.accordion-title:hover,
-.accordion-title.open {
-  color: black;
-}
-
 .accordion-title.open::after {
   content: "";
   border-top: 0;
@@ -287,9 +302,9 @@ footer img {
 }
 
 .accordion-content {
-  padding: 0.75em 1em;
+  padding: 0.5em 1em;
   text-align: left;
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 
 /* loader */
