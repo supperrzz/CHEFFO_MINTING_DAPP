@@ -23,7 +23,7 @@ function App() {
           </div>
           <div id="mint" class="section mint">
             <h2>Select a Cookie</h2>
-            <h4 class="subtext">Launch 12/21  |  Quantity 4321 Each  |  5 second Gifs  |  IPFS hosted  |  ERC721  |  2 MATIC Each | Discord = Recipe </h4>
+            <h4 class="subtext">Launch 12/21  |  Quantity 4321 Each  |  5 second Gifs  |  IPFS hosted  |  ERC721  |  2 MATIC Each | TWEET = Recipe </h4>
             <div className="grid">
               <MintCard setUserState={setUserState} SmartContract={SmartContract} img="https://images.squarespace-cdn.com/content/v1/617ce6e6e7be6e72e51086cc/1639905570476-A61K7SCHIUSPT5K1W7MW/Gingerbread-Rocket.png"/>
               <MintCard setUserState={setUserState} SmartContract={SmartContract2} img="https://images.squarespace-cdn.com/content/v1/617ce6e6e7be6e72e51086cc/1639905570950-ODPAHADURHWJFEVE0OZS/Milky-Way-Moons.png"/>
@@ -47,13 +47,6 @@ function App() {
           <a href="https://www.cheffo.io">
             <img src="//images.squarespace-cdn.com/content/v1/617ce6e6e7be6e72e51086cc/eba1e465-5a01-4493-8116-a255d434b9fa/CHEFFO+LOGO.png?format=1500w" alt="CHEFFO" class="logo"/>
           </a>
-          <ol>
-            <li class="link"><a href="/">COOKIE BOX</a></li>
-            <li class="link"><a href="https://www.cheffo.io/nft">V1</a></li>
-            <li class="link"><a href="https://www.cheffo.io/restaurant">RESTAURANT</a></li>
-            <li class="link"><a href="https://www.cheffo.io/cheffo-roadmap">MAP</a></li>
-          </ol>
-          <a href="https://cheffomint.live/" class="link mint-button"><span class="btn" >V1 MINT</span></a>
         </nav>
         {appContent()}      
       </div>
