@@ -265,6 +265,7 @@ nav .logo {
 .section.connect {
   min-height: 100%;
   text-align: center;
+  padding-top: 100px;
 }
 
 .section.connect img, .section.hero img {
